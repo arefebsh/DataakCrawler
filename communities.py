@@ -1,13 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
-from asli2 import asli
 import re
-from insertion import Query
-from sub_community import sub_community
+from query import Query
+from sub_communities import sub_community
 
 
-def community(url):
-    response = asli
+def community(url, cookie):
+    response = requests.get(url, cookie)
     soup = BeautifulSoup(response, 'html.parser')
 
     # tables name

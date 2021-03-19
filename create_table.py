@@ -1,5 +1,5 @@
 import pymysql
-from test import DB_Helper
+from db_helper import DB_Helper
 
 
 class Create_Table():
