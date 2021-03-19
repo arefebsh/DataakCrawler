@@ -3,9 +3,10 @@ from bs4 import BeautifulSoup
 import re
 from query import Query
 
+
 def sub_community(url, cookie):
-    response = requests.get(url, cookie)
-    soup = BeautifulSoup(response, 'html.parser')
+    response = requests.get(url, cookie, verify=False)
+    soup = BeautifulSoup(response.text, 'html.parser')
     sub_communities_data = []
     community_title = re.findall(re.compile(r'<span class=\"active\">(.*)</span>'), response)
 
@@ -35,4 +36,3 @@ def sub_community(url, cookie):
         query.sub_community()
 
     return "sub_communities"
-

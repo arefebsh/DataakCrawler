@@ -6,8 +6,8 @@ from sub_communities import sub_community
 
 
 def community(url, cookie):
-    response = requests.get(url, cookie)
-    soup = BeautifulSoup(response, 'html.parser')
+    response = requests.get(url, cookie, verify=False)
+    soup = BeautifulSoup(response.text, 'html.parser')
 
     # tables name
     community_data = []

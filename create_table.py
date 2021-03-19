@@ -6,6 +6,7 @@ class Create_Table():
 
     def query_create(self):
         TABLES = {}
+        result = DB_Helper()
 
         TABLES['tables'] = (
             "CREATE TABLE `tables`("
@@ -45,11 +46,6 @@ class Create_Table():
             "PRIMARY KEY (`s_id`)"
             ")ENGINE=InnoDB")
 
-        result = DB_Helper()
         result.create_table(TABLES)
-
-
-re = Create_Table()
-re.query_create()
 
 

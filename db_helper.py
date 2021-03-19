@@ -28,7 +28,6 @@ class DB_Helper:
 
     def __rollback__(self):
         self.con.rollback()
-        print("error")
 
     def fetch(self, sql):
         try:
