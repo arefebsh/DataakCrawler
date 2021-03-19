@@ -36,9 +36,6 @@ def community(url, cookie):
                                      for sub in sub_communities)
 
                 for url_sub in sub_community_url:
-                    sub_community(url_sub)
+                    sub_community(url_sub, cookie)
 
     return "communities and title tables"
-
-
-community('file:///C:/Users/fatem/Downloads/asli.html')

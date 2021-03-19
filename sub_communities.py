@@ -2,10 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 import re
 from query import Query
-from login import Login_Dataak
 
-def sub_community(url):
-    response = football
+def sub_community(url, cookie):
+    response = requests.get(url, cookie)
     soup = BeautifulSoup(response, 'html.parser')
     sub_communities_data = []
     community_title = re.findall(re.compile(r'<span class=\"active\">(.*)</span>'), response)
