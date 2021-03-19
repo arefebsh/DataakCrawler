@@ -40,9 +40,4 @@ class Query:
         sql1 = "update post set date=%s"
         self.db_helper.updating_rows(add_query, self.data)
 
-    #
-    # def Post(self):
-    #     add_posts = ("INSERT INTO posts "
-    #                  "(p_id, u_id, s_id) "
-    #                  "VALUES (%s, %s, %s, %s)")
-    #     self.insert(add_posts)
+
